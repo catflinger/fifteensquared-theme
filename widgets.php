@@ -1,23 +1,5 @@
 <?php
 
-    class My_Banana_Widget extends WP_Widget {
-
-        public function __construct() {
-            $widget_ops = array( 
-                'classname' => 'my_banana_widget',
-                'description' => 'A simple banana widget',
-            );
-            parent::__construct( 'my_banana_widget', 'Banana Widget', $widget_ops );
-        }
-
-        public function widget( $args, $instance ) {
-            //echo '<h1>bananas</h1>';
-            ?>
-                <li><h1>Bananas<h1></li>
-            <?php 
-        }
-    }
-
     class Widget_Andreas09_Search extends WP_Widget {
     
         public function __construct() {

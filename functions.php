@@ -3,10 +3,9 @@
 include __DIR__ . '/widgets.php';
 
 // register the widgets and sidebars on widgets_init
-function wp_andreas09_peedee_register_sidebars() {
+function wp_andreas09_register_sidebars() {
 
     //register the widgets
-    register_widget('my_banana_widget');
     register_widget('widget_andreas09_search');
     register_widget('widget_andreas09_subscribe');
     register_widget('widget_andreas09_meta');
@@ -16,7 +15,7 @@ function wp_andreas09_peedee_register_sidebars() {
     register_sidebar(array('name' => 'Main Sidebar', 'id' => 'sidebar-1'));
     register_sidebar(array('name' => 'Right Sidebar', 'id' => 'sidebar-2'));
 }
-add_action('widgets_init', 'wp_andreas09_peedee_register_sidebars');
+add_action('widgets_init', 'wp_andreas09_register_sidebars');
 
 
 // WP-Andreas09 Colour Options	
@@ -29,9 +28,9 @@ function wp_andreas09_add_theme_page() {
 
 
 
-	if ( $_GET['page'] == basename(__FILE__) ) {
+	if ( array_key_exists('page', $_GET) && $_GET['page'] == basename(__FILE__) ) {
 
-		if ( 'save' == $_REQUEST['action'] ) {
+		if ( array_key_exists('action', $_REQUEST) && 'save' == $_REQUEST['action'] ) {
 
 			update_option( 'wp_andreas09_ImageColour', $_REQUEST[ 'set_ImageColour' ] );
 
@@ -39,7 +38,7 @@ function wp_andreas09_add_theme_page() {
 
 			die;
 
-		} else if( 'reset' == $_REQUEST['action'] ) {
+		} else if( array_key_exists('action', $_REQUEST) && 'reset' == $_REQUEST['action'] ) {
 
 			delete_option( 'wp_andreas09_ImageColour' );
 
@@ -61,9 +60,9 @@ function wp_andreas09_add_theme_page() {
 
 function wp_andreas09_theme_page() {
 
-	if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings saved.','andreas09').'</strong></p></div>';
+	if ( array_key_exists('saved', $_REQUEST) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings saved.','andreas09').'</strong></p></div>';
 
-	if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings reset.','andreas09').'</strong></p></div>';
+	if ( array_key_exists('reset', $_REQUEST) && $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings reset.','andreas09').'</strong></p></div>';
 
 
 
@@ -161,7 +160,7 @@ li.black2 { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-bla
 
 <?php
 
-	$value = get_settings( 'wp_andreas09_ImageColour' );
+	$value = get_option( 'wp_andreas09_ImageColour' );
 
 	    echo "<select name=\"set_ImageColour\" style=\"width:200px;\" onchange=\"updateColour( this )\">";
 
@@ -241,7 +240,8 @@ function wp_andreas09_input( $var, $type, $description = "", $value = "", $selec
 
 
 
-		case "option":
+        case "option":
+            $extra = "";
 
 			if( $selected == $value ) { $extra = "selected=\"true\""; }
 
@@ -457,7 +457,7 @@ function wp_andreas09_nav($args = '') {
 
         $level = 0;
 
-        $parent_out == false;
+        $parent_out = false;
 
         foreach( $parents as $parent_page_id ) {
 
@@ -491,7 +491,7 @@ function wp_andreas09_nav($args = '') {
 
 				}
 
-                echo "<li class='" . $css_class . "' ><a href='" . get_page_link($page_id) . "' title='" . wp_specialchars($title) . "'>" . $title . "</a></li>\n";
+                echo "<li class='" . $css_class . "' ><a href='" . get_page_link($page_id) . "' title='" . esc_html($title) . "'>" . $title . "</a></li>\n";
 
             }
 
@@ -527,7 +527,7 @@ function wp_andreas09_nav($args = '') {
 
         
 
-                echo "<li class='" . $css_class . "'><a href='" . get_page_link($page_id) . "' title='" . wp_specialchars($title) . "'>" . $title . "</a></li>\n";
+                echo "<li class='" . $css_class . "'><a href='" . get_page_link($page_id) . "' title='" . esc_html($title) . "'>" . $title . "</a></li>\n";
 
             }
 
