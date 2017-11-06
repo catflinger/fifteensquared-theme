@@ -8,7 +8,7 @@
     
         public function widget( $args, $instance ) {
             ?>
-                <li><?php include (TEMPLATEPATH . '/searchform.php'); ?></li>
+                <li><?php get_search_form(); ?></li>
             <?php
         }
     }

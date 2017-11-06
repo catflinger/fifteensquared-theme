@@ -64,13 +64,13 @@
 
 
 
-			<p class="date"><?php _e('Posted by','andreas09') ?> <?php if (get_the_author_meta('url')) { ?><a href="<?php the_author_url(); ?>"><?php the_author(); ?></a><?php } else { the_author(); } ?> <?php _e('on','andreas09') ?> <?php the_time(__('jS F Y','andreas09')) ?></p>
+			<p class="date"><?php _e('Posted by','andreas09') ?> <?php if (get_the_author_meta('url')) { ?><a href="<?php the_author_meta('url'); ?>"><?php the_author(); ?></a><?php } else { the_author(); } ?> <?php _e('on','andreas09') ?> <?php the_time(__('jS F Y','andreas09')) ?></p>
 
                    
 
 				<div class="entry">
 
-<img src="<?php get_bloginfo('url'); ?>http://fifteensquared.net/sandbox/wp-content/images/authors/<?php the_author_meta('ID');?>.jpg" class="auth" alt="<?php the_author(); ?>. " title="<?php the_author(); ?> "/>
+<img src="<?php echo esc_url( home_url() ); ?>http://fifteensquared.net/sandbox/wp-content/images/authors/<?php the_author_meta('ID');?>.jpg" class="auth" alt="<?php the_author(); ?>. " title="<?php the_author(); ?> "/>
 
 					<?php the_content(__('Read the rest of this entry &raquo;','andreas09')); ?>
 

@@ -86,33 +86,33 @@ ul.horizontal {padding-top: 5px; padding-bottom: 5px; width: 90%;}
 
 .horizontal li {list-style: none; padding: 5px 0 5px 10px; margin: 10px; border: 1px solid #000000; font-weight: bold;}
 
-li.blue { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-blue.jpg);}
+li.blue { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-blue.jpg);}
 
-li.green { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-green.jpg);}
+li.green { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-green.jpg);}
 
-li.red { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-red.jpg);}
+li.red { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-red.jpg);}
 
-li.orange { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-orange.jpg);}
+li.orange { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-orange.jpg);}
 
-li.purple { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-purple.jpg);}
+li.purple { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-purple.jpg);}
 
-li.black { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-black.jpg);}
+li.black { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-black.jpg);}
 
-li.isecore { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-isecore.jpg);}
+li.isecore { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-isecore.jpg);}
 
-li.pink { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-pink.jpg);}
+li.pink { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-pink.jpg);}
 
-li.blue2 { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-blue2.jpg);}
+li.blue2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-blue2.jpg);}
 
-li.green2 { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-green2.jpg);}
+li.green2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-green2.jpg);}
 
-li.red2 { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-red2.jpg);}
+li.red2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-red2.jpg);}
 
-li.orange2 { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-orange2.jpg);}
+li.orange2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-orange2.jpg);}
 
-li.purple2 { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-purple2.jpg);}
+li.purple2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-purple2.jpg);}
 
-li.black2 { background: url(<?php bloginfo('template_url'); ?>/images/bodybg-black2.jpg);}
+li.black2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/bodybg-black2.jpg);}
 
 .center {text-align: center;}
 
@@ -509,7 +509,7 @@ function wp_andreas09_nav($args = '') {
 
 
 
-    	if( is_array($page_tree[$r['current']]['children']) === true ) {
+    	if( array_key_exists('children', $page_tree[$r['current']]) && is_array($page_tree[$r['current']]['children']) === true ) {
 
             $level += 1;
 

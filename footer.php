@@ -10,7 +10,7 @@
 
 
 
-<a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a> <?php _e('is powered by','andreas09'); ?> <a href="http://wordpress.org/">WordPress</a> | 
+<a href="<?php echo esc_url( home_url() ); ?>/"><?php bloginfo('name'); ?></a> <?php _e('is powered by','andreas09'); ?> <a href="http://wordpress.org/">WordPress</a> | 
 
 <?php _e('Design by','andreas09'); ?> <a href="http://andreasviklund.com">Andreas Viklund</a> | 
 

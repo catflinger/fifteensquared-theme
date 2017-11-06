@@ -70,7 +70,7 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 
 
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/<?php echo "" . get_option( 'wp_andreas09_ImageColour' )
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ) ; ?>/<?php echo "" . get_option( 'wp_andreas09_ImageColour' )
 
 
 
@@ -126,7 +126,7 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 
 
-<h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
+<h1><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('name'); ?></a></h1>
 
 
 
@@ -160,7 +160,7 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 <ul class="level1">
 
-<li class="<?php echo $highlight; ?>"><a href="<?php echo get_option('home'); ?>"><?php _e('Home','andreas09'); ?></a></li>
+<li class="<?php echo $highlight; ?>"><a href="<?php echo home_url(); ?>"><?php _e('Home','andreas09'); ?></a></li>
 
 <?php
 
