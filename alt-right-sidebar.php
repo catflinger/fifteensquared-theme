@@ -12,7 +12,7 @@
 
 
 
-<li id="categories"><h2><?php _e('Categories','andreas09'); ?></h2>
+<li id="categories"><h2><?php _e('Categories','wp-andreas09'); ?></h2>
 
 <ul>
 
@@ -27,7 +27,7 @@
 
 
 
-<li id="archives"><h2><?php _e('Archives','andreas09'); ?></h2>
+<li id="archives"><h2><?php _e('Archives','wp-andreas09'); ?></h2>
 
 <ul>
 
@@ -39,13 +39,13 @@
 
 
 
-<li><h2><?php _e('Subscribe','andreas09'); ?></h2>
+<li><h2><?php _e('Subscribe','wp-andreas09'); ?></h2>
 
 <ul>
 
-<li class="feed"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Entries (RSS)','andreas09'); ?></a></li>
+<li class="feed"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Entries (RSS)','wp-andreas09'); ?></a></li>
 
-<li class="feed"><a href="<?php bloginfo('comments_rss2_url'); ?>"><?php _e('Comments (RSS)','andreas09'); ?></a></li>
+<li class="feed"><a href="<?php bloginfo('comments_rss2_url'); ?>"><?php _e('Comments (RSS)','wp-andreas09'); ?></a></li>
 
 </ul>
 
@@ -53,7 +53,7 @@
 
 
 
-<li><h2><?php _e('Meta','andreas09'); ?></h2>
+<li><h2><?php _e('Meta','wp-andreas09'); ?></h2>
 
 <ul>
 

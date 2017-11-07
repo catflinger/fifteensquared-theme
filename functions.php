@@ -17,10 +17,11 @@ function wp_andreas09_register_sidebars() {
 }
 add_action('widgets_init', 'wp_andreas09_register_sidebars');
 
+add_theme_support('title-tag');
 
 // WP-Andreas09 Colour Options	
 
-load_theme_textdomain('andreas09');
+load_theme_textdomain('wp-andreas09');
 
 
 
@@ -52,7 +53,7 @@ function wp_andreas09_add_theme_page() {
 
 
 
-    add_theme_page("WP-Andreas09 Theme Options", __('Colour Options','andreas09'), 'edit_themes', basename(__FILE__), 'wp_andreas09_theme_page');
+    add_theme_page("WP-Andreas09 Theme Options", __('Colour Options','wp-andreas09'), 'edit_themes', basename(__FILE__), 'wp_andreas09_theme_page');
 
 }
 
@@ -60,9 +61,9 @@ function wp_andreas09_add_theme_page() {
 
 function wp_andreas09_theme_page() {
 
-	if ( array_key_exists('saved', $_REQUEST) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings saved.','andreas09').'</strong></p></div>';
+	if ( array_key_exists('saved', $_REQUEST) && $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings saved.','wp-andreas09').'</strong></p></div>';
 
-	if ( array_key_exists('reset', $_REQUEST) && $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings reset.','andreas09').'</strong></p></div>';
+	if ( array_key_exists('reset', $_REQUEST) && $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.__('Settings reset.','wp-andreas09').'</strong></p></div>';
 
 
 
@@ -74,11 +75,11 @@ function wp_andreas09_theme_page() {
 
 <h1>WP-Andreas09</h1>
 
-<p>WP-Andreas09 <?php _e('was designed by','andreas09'); ?> <a href="http://andreasviklund.com">Andreas Viklund</a> <?php _e('and Ported to WordPress by','andreas09'); ?> <a href="http://webgazette.co.uk">Ainslie Johnson</a>.</p>
+<p>WP-Andreas09 <?php _e('was designed by','wp-andreas09'); ?> <a href="http://andreasviklund.com">Andreas Viklund</a> <?php _e('and Ported to WordPress by','wp-andreas09'); ?> <a href="http://webgazette.co.uk">Ainslie Johnson</a>.</p>
 
 
 
-<h3><?php _e('Available Image Colours:','andreas09'); ?></h3>
+<h3><?php _e('Available Image Colours:','wp-andreas09'); ?></h3>
 
 <style>
 
@@ -122,41 +123,41 @@ li.black2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ;
 
 <ul class="horizontal">
 
-<li class="blue"><?php _e('Original Blue','andreas09') ?></li>
+<li class="blue"><?php _e('Original Blue','wp-andreas09') ?></li>
 
-<li class="green"><?php _e('Original Green','andreas09') ?></li>
+<li class="green"><?php _e('Original Green','wp-andreas09') ?></li>
 
-<li class="red"><?php _e('Original  Red','andreas09') ?></li>
+<li class="red"><?php _e('Original  Red','wp-andreas09') ?></li>
 
-<li class="orange"><?php _e('Original Orange','andreas09') ?></li>
+<li class="orange"><?php _e('Original Orange','wp-andreas09') ?></li>
 
-<li class="purple"><?php _e('Original Purple','andreas09') ?></li>
+<li class="purple"><?php _e('Original Purple','wp-andreas09') ?></li>
 
-<li class="black"><?php _e('Original Black','andreas09') ?></li>
+<li class="black"><?php _e('Original Black','wp-andreas09') ?></li>
 
-<li class="isecore">Isecore <?php _e('Blue - Curtesy of','andreas09') ?> <a href="http://blog.isecore.net/">Isecore</a></li>
+<li class="isecore">Isecore <?php _e('Blue - Curtesy of','wp-andreas09') ?> <a href="http://blog.isecore.net/">Isecore</a></li>
 
-<li class="pink"><?php _e('Pretty Pink','andreas09') ?></li>
+<li class="pink"><?php _e('Pretty Pink','wp-andreas09') ?></li>
 
-<li class="blue2"><?php _e('Striped Blue','andreas09') ?></li>
+<li class="blue2"><?php _e('Striped Blue','wp-andreas09') ?></li>
 
-<li class="green2"><?php _e('Striped Green','andreas09') ?></li>
+<li class="green2"><?php _e('Striped Green','wp-andreas09') ?></li>
 
-<li class="red2"><?php _e('Striped Red','andreas09') ?></li>
+<li class="red2"><?php _e('Striped Red','wp-andreas09') ?></li>
 
-<li class="orange2"><?php _e('Striped Orange','andreas09') ?></li>
+<li class="orange2"><?php _e('Striped Orange','wp-andreas09') ?></li>
 
-<li class="purple2"><?php _e('Striped Purple','andreas09') ?></li>
+<li class="purple2"><?php _e('Striped Purple','wp-andreas09') ?></li>
 
-<li class="black2"><?php _e('Striped Black','andreas09') ?></li>
+<li class="black2"><?php _e('Striped Black','wp-andreas09') ?></li>
 
 </ul>
 
-<h3><?php _e('Image Colour Settings','andreas09') ?></h3>
+<h3><?php _e('Image Colour Settings','wp-andreas09') ?></h3>
 
 <form method="post">
 
-<p><?php _e('Select colour from list:','andreas09') ?> 
+<p><?php _e('Select colour from list:','wp-andreas09') ?> 
 
 <?php
 
@@ -164,33 +165,33 @@ li.black2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ;
 
 	    echo "<select name=\"set_ImageColour\" style=\"width:200px;\" onchange=\"updateColour( this )\">";
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Original Blue','andreas09'), "blue", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Original Blue','wp-andreas09'), "blue", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Original Green','andreas09'), "green", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Original Green','wp-andreas09'), "green", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Original Red','andreas09'), "red", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Original Red','wp-andreas09'), "red", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Original Orange','andreas09'), "orange", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Original Orange','wp-andreas09'), "orange", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Original Purple','andreas09'), "purple", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Original Purple','wp-andreas09'), "purple", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Original Black','andreas09'), "black", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Original Black','wp-andreas09'), "black", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Isecore Blue','andreas09'), "isecore", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Isecore Blue','wp-andreas09'), "isecore", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Pretty Pink','andreas09'), "pink", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Pretty Pink','wp-andreas09'), "pink", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Striped Blue','andreas09'), "blue2", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Striped Blue','wp-andreas09'), "blue2", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Striped Green','andreas09'), "green2", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Striped Green','wp-andreas09'), "green2", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Striped Red','andreas09'), "red2", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Striped Red','wp-andreas09'), "red2", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Striped Orange','andreas09'), "orange2", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Striped Orange','wp-andreas09'), "orange2", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Striped Purple','andreas09'), "purple2", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Striped Purple','wp-andreas09'), "purple2", $value );
 
-		wp_andreas09_input( "set_ImageColour", "option", __('Striped Black','andreas09'), "black2", $value );
+		wp_andreas09_input( "set_ImageColour", "option", __('Striped Black','wp-andreas09'), "black2", $value );
 
 		echo "</select>";
 
@@ -202,13 +203,13 @@ li.black2 { background: url(<?php echo esc_url( get_template_directory_uri() ) ;
 
 <!-- Save Settings Button -->
 
-<?php wp_andreas09_input( "save", "submit", "", __('Save Settings','andreas09') ); ?>
+<?php wp_andreas09_input( "save", "submit", "", __('Save Settings','wp-andreas09') ); ?>
 
 <input type="hidden" name="action" value="save" />
 
 </form>
 
-<p class="center"><?php _e('With credit to','andreas09'); ?> <a href="http://www.binarymoon.co.uk/" title="Binary Moon - games, web design, and other random nonsense">Ben Gillbanks</a>. <?php _e('I could not have implemented the <strong>Current Theme Options</strong> without his excellent example in the','andreas09'); ?> <a href="http://www.binarymoon.co.uk/regulus/" title="Regulus theme for WordPress">Regulus</a></p>
+<p class="center"><?php _e('With credit to','wp-andreas09'); ?> <a href="http://www.binarymoon.co.uk/" title="Binary Moon - games, web design, and other random nonsense">Ben Gillbanks</a>. <?php _e('I could not have implemented the <strong>Current Theme Options</strong> without his excellent example in the','wp-andreas09'); ?> <a href="http://www.binarymoon.co.uk/regulus/" title="Regulus theme for WordPress">Regulus</a></p>
 
 
 

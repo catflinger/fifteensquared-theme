@@ -90,9 +90,6 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 
 
-<title><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; <?php _e('Blog Archive','andreas09'); ?> <?php } ?> <?php wp_title(); ?></title>
-
-
 
 </head>
 
@@ -160,7 +157,7 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 <ul class="level1">
 
-<li class="<?php echo $highlight; ?>"><a href="<?php echo home_url(); ?>"><?php _e('Home','andreas09'); ?></a></li>
+<li class="<?php echo $highlight; ?>"><a href="<?php echo home_url(); ?>"><?php _e('Home','wp-andreas09'); ?></a></li>
 
 <?php
 

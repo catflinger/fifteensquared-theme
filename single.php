@@ -20,11 +20,11 @@
 
 	<div class="post" id="post-<?php the_ID(); ?>">
 
-<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to','andreas09'); ?> <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to','wp-andreas09'); ?> <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
 
 
-		<p class="date"><?php _e('Posted by','andreas09'); ?> <?php if (get_the_author_meta('url')) { ?><a href="<?php the_author_meta('url'); ?>"><?php the_author(); ?></a><?php } else { the_author(); } ?> <?php _e('on','andreas09'); ?> <?php the_time (__('F jS, Y','andreas09')) ?></p>
+		<p class="date"><?php _e('Posted by','wp-andreas09'); ?> <?php if (get_the_author_meta('url')) { ?><a href="<?php the_author_meta('url'); ?>"><?php the_author(); ?></a><?php } else { the_author(); } ?> <?php _e('on','wp-andreas09'); ?> <?php the_time (__('F jS, Y','wp-andreas09')) ?></p>
 
 
 
@@ -32,24 +32,24 @@
 
 <img src="<?php echo esc_url( home_url() ); ?>/wp-content/images/authors/<?php the_author_meta('ID');?>.jpg" class="auth" alt="<?php the_author(); ?>. " title="<?php the_author(); ?> "/>
 
-			<?php the_content(__('Read the rest of this entry &raquo;','andreas09')); ?>
+			<?php the_content(__('Read the rest of this entry &raquo;','wp-andreas09')); ?>
 
 </div>
 
 
 
 			<?php wp_link_pages(array(
-                'before' => '<p><strong>'.__('Pages:','andreas09').'</strong> ',
+                'before' => '<p><strong>'.__('Pages:','wp-andreas09').'</strong> ',
                 'after' => '</p>', 
                 'next_or_number' => 'number')); ?>
 
 			<p class="postmetadata">
 
-				 		<?php _e('This entry was posted on','andreas09'); ?> <?php the_time(__('l, F jS, Y','andreas09')) ?> 
+				 		<?php _e('This entry was posted on','wp-andreas09'); ?> <?php the_time(__('l, F jS, Y','wp-andreas09')) ?> 
 
-						<?php _e('and is filed under','andreas09'); ?> <?php the_category(', ') ?>.
+						<?php _e('and is filed under','wp-andreas09'); ?> <?php the_category(', ') ?>.
 
-						<?php _e('You can follow any responses to this entry through the','andreas09'); ?> <?php post_comments_feed_link('RSS 2.0'); ?> <?php _e('feed','andreas09'); ?>. 
+						<?php _e('You can follow any responses to this entry through the','wp-andreas09'); ?> <?php post_comments_feed_link('RSS 2.0'); ?> <?php _e('feed','wp-andreas09'); ?>. 
 
 						
 
@@ -57,7 +57,7 @@
 
 							// Both Comments and Pings are open ?>
 
-							<?php _e('You can','andreas09'); ?> <a href="#respond"><?php _e('leave a response','andreas09'); ?></a>, <?php _e('or','andreas09'); ?> <a href="<?php trackback_url(true); ?>" rel="trackback"><?php _e('trackback','andreas09'); ?></a> <?php _e('from your own site','andreas09'); ?>.
+							<?php _e('You can','wp-andreas09'); ?> <a href="#respond"><?php _e('leave a response','wp-andreas09'); ?></a>, <?php _e('or','wp-andreas09'); ?> <a href="<?php trackback_url(true); ?>" rel="trackback"><?php _e('trackback','wp-andreas09'); ?></a> <?php _e('from your own site','wp-andreas09'); ?>.
 
 						
 
@@ -65,7 +65,7 @@
 
 							// Only Pings are Open ?>
 
-							<?php _e('Responses are currently closed, but you can','andreas09'); ?> <a href="<?php trackback_url(true); ?> " rel="trackback"><?php _e('trackback','andreas09'); ?></a> <?php _e('from your own site','andreas09'); ?>.
+							<?php _e('Responses are currently closed, but you can','wp-andreas09'); ?> <a href="<?php trackback_url(true); ?> " rel="trackback"><?php _e('trackback','wp-andreas09'); ?></a> <?php _e('from your own site','wp-andreas09'); ?>.
 
 						
 
@@ -73,7 +73,7 @@
 
 							// Comments are open, Pings are not ?>
 
-							<?php _e('You can skip to the end and leave a response. Pinging is currently not allowed.','andreas09'); ?>
+							<?php _e('You can skip to the end and leave a response. Pinging is currently not allowed.','wp-andreas09'); ?>
 
 			
 
@@ -81,11 +81,11 @@
 
 							// Neither Comments, nor Pings are open ?>
 
-							<?php _e('Both comments and pings are currently closed.','andreas09'); ?>			
+							<?php _e('Both comments and pings are currently closed.','wp-andreas09'); ?>			
 
 						
 
-						<?php } edit_post_link(__('Edit this entry.','andreas09'),'',''); ?>
+						<?php } edit_post_link(__('Edit this entry.','wp-andreas09'),'',''); ?>
 
 			</p>		
 
@@ -107,7 +107,7 @@
 
 	<?php endwhile; else: ?>
 
-		<p><?php _e('Sorry, no posts matched your criteria.','andreas09'); ?></p>
+		<p><?php _e('Sorry, no posts matched your criteria.','wp-andreas09'); ?></p>
 
 	
 

@@ -21,10 +21,10 @@
     
         public function widget( $args, $instance ) {
             ?>
-            <li><h2><?php _e('Subscribe','andreas09'); ?></h2>
+            <li><h2><?php _e('Subscribe','wp-andreas09'); ?></h2>
                 <ul>
-                    <li class="feed"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Entries (RSS)','andreas09'); ?></a></li>
-                    <li class="feed"><a href="<?php bloginfo('comments_rss2_url'); ?>"><?php _e('Comments (RSS)','andreas09'); ?></a></li>
+                    <li class="feed"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Entries (RSS)','wp-andreas09'); ?></a></li>
+                    <li class="feed"><a href="<?php bloginfo('comments_rss2_url'); ?>"><?php _e('Comments (RSS)','wp-andreas09'); ?></a></li>
                 </ul>
             </li>
             <?php
@@ -39,7 +39,7 @@
     
         public function widget( $args, $instance ) {
             ?>
-            <li><h2><?php _e('Meta','andreas09'); ?></h2>
+            <li><h2><?php _e('Meta','wp-andreas09'); ?></h2>
                 <ul>
                     <?php wp_register(); ?>
                     <li><?php wp_loginout(); ?></li>
@@ -58,7 +58,7 @@
     
         public function widget( $args, $instance ) {
             ?>
-            <li id="recent-posts"><h2><?php _e('Recent Posts','andreas09'); ?></h2>
+            <li id="recent-posts"><h2><?php _e('Recent Posts','wp-andreas09'); ?></h2>
                 <ul>
                     <?php wp_get_archives('type=postbypost&limit=25'); ?>
                 </ul>
