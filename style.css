@@ -1222,3 +1222,12 @@ a img.aligncenter {
 
 /*** End of file ***/
 
+.cptch_block {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#acp-preview {
+    margin-bottom: 10px;
+}
+

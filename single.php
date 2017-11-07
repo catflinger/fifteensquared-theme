@@ -95,7 +95,9 @@
 
 		
 
-	<?php comments_template(); ?>
+	<?php get_template_part('comments'); ?>
+
+
 
 <div class="bottomnavigation">
 
