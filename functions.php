@@ -19,6 +19,11 @@ add_action('widgets_init', 'wp_andreas09_register_sidebars');
 
 add_theme_support('title-tag');
 
+function wp_andreas09_add_editor_style() {
+    add_editor_style();
+}
+add_action( 'admin_init', 'wp_andreas09_add_editor_style' );
+
 // WP-Andreas09 Colour Options	
 
 load_theme_textdomain('wp-andreas09');
