@@ -30,7 +30,7 @@
 
 		<div class="entrytext">
 
-<img src="<?php echo esc_url( home_url() ); ?>http://fifteensquared.net/sandbox/wp-content/images/authors/<?php the_author_meta('ID');?>.jpg" class="auth" alt="<?php the_author(); ?>. " title="<?php the_author(); ?> "/>
+<img src="<?php echo esc_url( home_url() ); ?>/wp-content/images/authors/<?php the_author_meta('ID');?>.jpg" class="auth" alt="<?php the_author(); ?>. " title="<?php the_author(); ?> "/>
 
 			<?php the_content(__('Read the rest of this entry &raquo;','andreas09')); ?>
 

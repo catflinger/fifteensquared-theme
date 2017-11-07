@@ -22,9 +22,10 @@
 
 		</div>
 
-<?php $attachment_link = get_the_attachment_link($post->ID, true, array(450, 800)); // This also populates the iconsize for the next line ?>
+<?php $attachment_link = wp_get_attachment_link($post->ID, 'full'); ?>
 
-<?php $_post = &get_post($post->ID); $classname = ($_post->iconsize[0] <= 128 ? 'small' : '') . 'attachment'; // This lets us style narrow icons specially ?>
+<?php $_post =  get_post($post->ID); 
+                $classname = (!empty($_post->iconsize) && $_post->iconsize[0] <= 128 ? 'small' : '') . 'attachment'; // This lets us style narrow icons specially ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 

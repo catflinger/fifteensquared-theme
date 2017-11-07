@@ -1,2 +1,0 @@
-[20-Mar-2017 19:40:07 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/fifteen/public_html/sandbox/wp-content/themes/wp-andreas09/404.php on line 1
-[24-Mar-2017 09:04:03 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/fifteen/public_html/sandbox/wp-content/themes/wp-andreas09/404.php on line 1
