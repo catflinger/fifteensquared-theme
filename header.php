@@ -99,8 +99,7 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 
 
-<body>
-
+<body <?php body_class(); ?>>
 
 
 

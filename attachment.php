@@ -27,7 +27,7 @@
 <?php $_post =  get_post($post->ID); 
                 $classname = (!empty($_post->iconsize) && $_post->iconsize[0] <= 128 ? 'small' : '') . 'attachment'; // This lets us style narrow icons specially ?>
 
-		<div class="post" id="post-<?php the_ID(); ?>">
+		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 			<h2><a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?></a> &raquo; <a href="<?php echo get_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link:','wp-andreas09'); ?> <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 

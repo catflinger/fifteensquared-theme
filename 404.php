@@ -4,8 +4,6 @@
 
 <?php get_template_part('right-sidebar'); ?>
 
-'wp-andreas09'
-
 <div id="content">
 
 	<div class="page">

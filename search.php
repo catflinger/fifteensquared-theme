@@ -5,37 +5,35 @@
 <?php get_template_part('right-sidebar'); ?>
 
 
-'wp-andreas09'
+
 	<div id="content">
 
-	<?php if (have_posts()) : ?>'wp-andreas09'
-'wp-andreas09'
+	<?php if (have_posts()) : ?>
+
 
 
 		<h1 class="pagetitle"><?php _e('Search Results','wp-andreas09'); ?></h1>
 
 		
 
-		<div class="navigation">'wp-andreas09'
-'wp-andreas09''wp-andreas09'
+		<div class="navigation">
+'
 			<div class="alignleft"><?php next_posts_link(__('&laquo; Previous Entries','wp-andreas09')) ?></div>
-'wp-andreas09'
-			<div class="alignright"><?php previous_pos'wp-andreas09''Next Entries &raquo;','wp-andreas09')) ?></div>'wp-andreas09''wp-andreas09''wp-andreas09''wp-andreas09'
+
+			<div class="alignright"><?php previous_post_link(__('Next Entries &raquo;','wp-andreas09')) ?></div>
 
 		</div>
 
 
 
-'wp-andreas09'
-'wp-andreas09'
 		<?php while (have_posts()) : the_post(); ?>
 
 				
 
-			<div class="post">'wp-andreas09'
-'wp-andreas09'
-				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" tit'wp-andreas09'e('Permanent Link to','wp-andreas09'); ?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
-'wp-andreas09'
+			<div class="post">
+
+				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to','wp-andreas09'); ?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+
 				<p class="date"><?php _e('Posted on','wp-andreas09'); ?> <?php the_time(__('l, F jS, Y','wp-andreas09')) ?></small></p>
 
 		<?php the_excerpt(''); ?>
