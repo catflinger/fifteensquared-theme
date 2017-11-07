@@ -14,7 +14,7 @@ Template Name: 2 Column Links List
 
 
 
-<?php include (TEMPLATEPATH . '/alt-right-sidebar.php'); ?>
+<?php get_template_part ('alt-right-sidebar'); ?>
 
 
 

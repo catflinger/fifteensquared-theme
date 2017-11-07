@@ -2,7 +2,7 @@
 
 <?php get_sidebar(); ?>
 
-<?php include (TEMPLATEPATH . '/right-sidebar.php'); ?>
+<?php get_template_part('right-sidebar'); ?>
 
 'wp-andreas09'
 

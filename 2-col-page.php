@@ -12,7 +12,7 @@ Template Name: 2 Column Page
 
 <?php get_header(); ?>
 
-<?php include (TEMPLATEPATH . '/alt-right-sidebar.php'); ?>
+<?php get_template_part('alt-right-sidebar'); ?>
 
 
 
