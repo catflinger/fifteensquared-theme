@@ -17,10 +17,10 @@
 		
 
 		<div class="navigation">
-'
+
 			<div class="alignleft"><?php next_posts_link(__('&laquo; Previous Entries','wp-andreas09')) ?></div>
 
-			<div class="alignright"><?php previous_post_link(__('Next Entries &raquo;','wp-andreas09')) ?></div>
+			<div class="alignright"><?php previous_posts_link(__('Next Entries &raquo;','wp-andreas09')) ?></div>
 
 		</div>
 
