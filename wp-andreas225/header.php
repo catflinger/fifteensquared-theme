@@ -2,19 +2,19 @@
 
 
 
-$wp_andreas09_ImageColour = get_option('wp_andreas09_ImageColour');
+$wp_andreas225_ImageColour = get_option('wp_andreas225_ImageColour');
 
 
 
-if (!$wp_andreas09_ImageColour) {
+if (!$wp_andreas225_ImageColour) {
 
 
 
-$wp_andreas09_ImageColour = 'blue';
+$wp_andreas225_ImageColour = 'blue';
 
 
 
-update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
+update_option('wp_andreas225_ImageColour', $wp_andreas225_ImageColour);
 
 
 
@@ -70,7 +70,7 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 
 
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ) ; ?>/<?php echo "" . get_option( 'wp_andreas09_ImageColour' )
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ) ; ?>/<?php echo "" . get_option( 'wp_andreas225_ImageColour' )
 
 
 
@@ -156,13 +156,13 @@ update_option('wp_andreas09_ImageColour', $wp_andreas09_ImageColour);
 
 <ul class="level1">
 
-<li class="<?php echo $highlight; ?>"><a href="<?php echo home_url(); ?>"><?php _e('Home','wp-andreas09'); ?></a></li>
+<li class="<?php echo $highlight; ?>"><a href="<?php echo home_url(); ?>"><?php _e('Home','wp-andreas225'); ?></a></li>
 
 <?php
 
-    if(function_exists("wp_andreas09_nav")) {
+    if(function_exists("wp_andreas225_nav")) {
 
-      wp_andreas09_nav("sort_column=menu_order&list_tag=0&show_all_parents=1&show_root=1");
+      wp_andreas225_nav("sort_column=menu_order&list_tag=0&show_all_parents=1&show_root=1");
 
     }
 

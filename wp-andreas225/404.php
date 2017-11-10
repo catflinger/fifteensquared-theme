@@ -8,7 +8,7 @@
 
 	<div class="page">
 
-		<h2 class="center"><?php _e('Error 404 - Not Found','wp-andreas09') ?></h2>
+		<h2 class="center"><?php _e('Error 404 - Not Found','wp-andreas225') ?></h2>
 
 	</div>
 

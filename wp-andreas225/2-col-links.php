@@ -40,7 +40,7 @@ Template Name: 2 Column Links List
 
 	
 
-	<?php edit_post_link(__('Edit this entry.','wp-andreas09'), '<p>', '</p>'); ?>
+	<?php edit_post_link(__('Edit this entry.','wp-andreas225'), '<p>', '</p>'); ?>
 
 
 

@@ -24,7 +24,7 @@ Template Name: 2 Column Archives List
 
 			<h1><?php the_title(); ?></h1>
 
-			<h2 id="months"><?php _e('Archives by Month:','wp-andreas09'); ?></h2>
+			<h2 id="months"><?php _e('Archives by Month:','wp-andreas225'); ?></h2>
 
 			<ul>
 
@@ -32,7 +32,7 @@ Template Name: 2 Column Archives List
 
 			</ul>
 
-			<h2 id="categories"><?php _e('Archives by Category:','wp-andreas09'); ?></h2>
+			<h2 id="categories"><?php _e('Archives by Category:','wp-andreas225'); ?></h2>
 
 			<ul>
 
@@ -44,7 +44,7 @@ Template Name: 2 Column Archives List
 
 	</div>
 
-	<?php edit_post_link(__('Edit this entry.','wp-andreas09'), '<p>', '</p>'); ?>
+	<?php edit_post_link(__('Edit this entry.','wp-andreas225'), '<p>', '</p>'); ?>
 
 </div>
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Andreas09\n"
+"Project-Id-Version: wp-andreas225\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2006-05-04 21:30-0000\n"
 "Last-Translator: Ainslie Johnson <webmaster@webgazette.co.uk>\n"

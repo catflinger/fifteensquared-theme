@@ -12,7 +12,7 @@
 
 
 
-<li><h2><?php _e('Recent Posts','wp-andreas09'); ?></h2>
+<li><h2><?php _e('Recent Posts','wp-andreas225'); ?></h2>
 
 <ul>
 

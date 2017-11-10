@@ -18,14 +18,14 @@
 
 		<div class="entrytext">
 
-			<?php the_content('<p class="serif">'.__('Read the rest of this page &raquo;','wp-andreas09').'</p>'); ?>
+			<?php the_content('<p class="serif">'.__('Read the rest of this page &raquo;','wp-andreas225').'</p>'); ?>
 
 		</div>
 
 		
 
 		<?php wp_link_pages(array(
-            'before' => '<p><strong>'.__('Pages','wp-andreas09').':</strong> ', 
+            'before' => '<p><strong>'.__('Pages','wp-andreas225').':</strong> ', 
             'after' => '</p>', 
             'next_or_number' => 'number')); ?>
 
@@ -39,7 +39,7 @@
 
 <?php comments_template(); ?>	
 
-	<?php edit_post_link(__('Edit this entry.','wp-andreas09'), '<p>', '</p>'); ?>
+	<?php edit_post_link(__('Edit this entry.','wp-andreas225'), '<p>', '</p>'); ?>
 
 
 

@@ -48,7 +48,7 @@ Template Name: Links List
 
 </div>
 
-	<?php edit_post_link(__('Edit this entry.','wp-andreas09'), '<p>', '</p>'); ?>
+	<?php edit_post_link(__('Edit this entry.','wp-andreas225'), '<p>', '</p>'); ?>
 
 
 
