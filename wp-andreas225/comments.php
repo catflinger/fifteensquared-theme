@@ -4,27 +4,31 @@
 
 		die ('Please do not load this page directly. Thanks!');
 
-        if (!empty($post->post_password)) { // if there's a password
+    if (!empty($post->post_password)) { // if there's a password
 
-            if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
-				?>
-    				<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.','wp-andreas225'); ?><p>
-				<?php
+        if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
+            ?>
+                <p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.','wp-andreas225'); ?><p>
+            <?php
 
-				return;
-            }
+            return;
         }
+    }
 
-		/* This variable is for alternating comment background */
-		$oddcomment = 'alt';
+    /* This variable is for alternating comment background */
+    $oddcomment = 'alt';
 ?>
 
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
 
-	<h3 id="comments"><?php comments_number(__('No Responses','wp-andreas225'), __('One Response','wp-andreas225'), __('% Responses','wp-andreas225') );?> <?php _e('to','wp-andreas225'); ?> &#8220;<?php the_title(); ?>&#8221;</h3> 
-	<ol class="commentlist">
+	<h3 id="comments">
+        <?php comments_number(__('No Responses','wp-andreas225'), __('One Response','wp-andreas225'), __('% Responses','wp-andreas225') );?> 
+        <?php _e('to','wp-andreas225'); ?> &#8220;<?php the_title(); ?>&#8221;
+    </h3> 
+	
+    <ol class="commentlist">
 
         <?php foreach ($comments as $comment) : ?>
 
@@ -32,14 +36,16 @@
                 <cite><?php comment_author_link() ?></cite> <?php _e('says','wp-andreas225'); ?>:
 
                 <?php if ($comment->comment_approved == '0') : ?>
-
-                <em><?php _e('Your comment is awaiting moderation.','wp-andreas225'); ?></em>
-
+                    <em><?php _e('Your comment is awaiting moderation.','wp-andreas225'); ?></em>
                 <?php endif; ?>
 
                 <br />
 
-                <small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date(__('F jS, Y','wp-andreas225')) ?> <?php _e('at','wp-andreas225'); ?> <?php comment_time() ?></a> <?php edit_comment_link('Edit','',''); ?></small>
+                <small class="commentmetadata">
+                    <a href="#comment-<?php comment_ID() ?>" title="">
+                        <?php comment_date(__('F jS, Y','wp-andreas225')) ?> <?php _e('at','wp-andreas225'); ?> <?php comment_time() ?>
+                    </a> <?php edit_comment_link('Edit','',''); ?>
+                </small>
 
                 <?php comment_text() ?>
             </li>
@@ -75,7 +81,13 @@
 
     <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 
-        <p><?php _e('You must be','wp-andreas225'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>"><?php _e('logged in','wp-andreas225'); ?></a> <?php _e('to post a comment.','wp-andreas225'); ?></p>
+        <p>
+            <?php _e('You must be','wp-andreas225'); ?> 
+            <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">
+                <?php _e('logged in','wp-andreas225'); ?>
+            </a> 
+            <?php _e('to post a comment.','wp-andreas225'); ?>
+        </p>
 
     <?php else : ?>
 
@@ -83,21 +95,32 @@
 
             <?php if ( $user_ID ) : ?>
 
-                <p><?php _e('Logged in as','wp-andreas225'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Log out of this account','wp-andreas225'); ?>"><?php _e('Logout &raquo;','wp-andreas225'); ?></a></p>
+                <p>
+                    <?php _e('Logged in as','wp-andreas225'); ?> 
+                    <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. 
+                    <a href="<?php echo wp_logout_url(get_permalink()); ?>" 
+                    title="<?php _e('Log out of this account','wp-andreas225'); ?>"><?php _e('Logout &raquo;','wp-andreas225'); ?></a>
+                </p>
 
             <?php else : ?>
 
                 <p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+                    <label for="author">
+                        <small><?php _e('Name','wp-andreas225'); ?> <?php if ($req) echo _e('(required)','wp-andreas225'); ?></small>
+                    </label>
+                </p>
 
-                <label for="author"><small><?php _e('Name','wp-andreas225'); ?> <?php if ($req) echo _e('(required)','wp-andreas225'); ?></small></label></p>
+                <p>
+                    <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+                    <label for="email">
+                        <small><?php _e('Mail (will not be published)','wp-andreas225'); ?> <?php if ($req) echo _e('(required)','wp-andreas225'); ?></small>
+                    </label>
+                </p>
 
-                <p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-
-                <label for="email"><small><?php _e('Mail (will not be published)','wp-andreas225'); ?> <?php if ($req) echo _e('(required)','wp-andreas225'); ?></small></label></p>
-
-                <p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-
-                <label for="url"><small><?php _e('Website','wp-andreas225'); ?></small></label></p>
+                <p>
+                    <input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+                    <label for="url"><small><?php _e('Website','wp-andreas225'); ?></small></label>
+                </p>
 
             <?php endif; ?>
 
