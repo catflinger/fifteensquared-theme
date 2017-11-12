@@ -93,9 +93,7 @@
 
 	</div>
 
-		
-
-	<?php get_template_part('comments'); ?>
+	<?php comments_template(); ?>
 
 
 
