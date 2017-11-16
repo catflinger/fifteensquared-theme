@@ -278,7 +278,7 @@ msgstr ""
 
 #: attachment.php:45
 #: single.php:36
-msgid "You can skip to the end and leave a response. Pinging is currently not allowed."
+msgid "You can skip to the end and leave a response."
 msgstr ""
 
 #: attachment.php:49
