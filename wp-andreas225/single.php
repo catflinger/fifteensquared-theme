@@ -73,7 +73,7 @@
 
 							// Comments are open, Pings are not ?>
 
-							<?php _e('You can skip to the end and leave a response. Pinging is currently not allowed.','wp-andreas225'); ?>
+							<?php _e('You can skip to the end and leave a response.','wp-andreas225'); ?>
 
 			
 
