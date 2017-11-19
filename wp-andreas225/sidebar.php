@@ -20,7 +20,7 @@
 
 <ul>
 
-<?php wp_list_categoriess(array(
+<?php wp_list_categories(array(
     'sort_column' => 'name',
     'show_count' => 0,
     'hierarchical' => 1)); ?>
