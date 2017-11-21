@@ -1,28 +1,28 @@
 /* 
 
+Version: 0.9.3
+
 Theme Name: wp-andreas225
 
-Theme URI: http://fifteensquared.net/wordpress-themes/wp-andreas09/
+Theme URI: http://fifteensquared.net/wordpress-themes/wp-andreas225/
 
-Description: wp-andreas225 theme for WordPress based on the open source template, andreas225 by <a href="http://www.andreasviklund.com/">Andreas Viklund</a> - Ported to WordPress by <a href="http://webgazette.co.uk/">Ainslie Johnson</a>.
-
-Version: 2.1
-
-Author: Andreas Viklund and Ainslie Johnson
+Author: Andreas Viklund and Ainslie Johnson, modifications by Paul Drury
 
 Author URI: http://fifteensquared.net/peedee/
+Text Domain: wp-adreas225
+
+Description: wp-andreas225 theme for WordPress based on the open source template, andreas09 by <a href="http://www.andreasviklund.com/">Andreas Viklund</a> - Ported to WordPress by <a href="http://webgazette.co.uk/">Ainslie Johnson</a>.
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: wp-adreas09
 
-andreas225 v1.0 (Dec 10th 2005) - An open source template by Andreas Viklund - http://andreasviklund.com. Free to use for any purpose as long as the proper credits are given to the original author.
+
+andreas09 v1.0 (Dec 10th 2005) - An open source template by Andreas Viklund - http://andreasviklund.com. Free to use for any purpose as long as the proper credits are given to the original author.
 
 
 Ported to WordPress by Ainslie Johnson - Last updated 28/07/06
 
-
-Modifications for fifteensquared.net by Paul Drury, November 2017
+Modifications for fifteensquared.net by Paul Drury, November 2017.  Mainly replacing deprecated system calls.
 
 Original Theme URI is http://webgazette.co.uk/wordpress-themes/wp-andreas09/, original theme author URI is http://webgazette.co.uk/wordpress-themes/wp-andreas09/
 
