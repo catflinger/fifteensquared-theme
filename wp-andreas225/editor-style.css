@@ -3,7 +3,7 @@
 
 .mceContentBody {
     background-color:#fafcff;
-    font:100% Verdana,Tahoma,Arial,sans-serif;
+    font:110% Verdana,Tahoma,Arial,sans-serif;
 }
 
 a .mceContentBody {
@@ -27,43 +27,25 @@ p .mceContentBody {
     color:#303030;
     text-align:left;
 }
-   
     
-    /*** Content ***/
-   
+
+/*** Content ***/  
     
-    #content h1,#contentalt h1,#contentalt h2 {
-    
-        background-color:inherit;
-    
-        color:#606060;
-    
-        font-size:1.8em;
-    
-        font-weight:bold;
-    
-        letter-spacing:-1px;
-    
-        margin:0 0 15px;
-    
-        padding:0;
-    
-    }
-    
-    
-    
-    #content h1,#contentalt h1 {
-    
-        border-bottom: 1px solid #b0b0b0;
-    
-    }
-    
-    
-    
-    #content h2 {
-    
-        font-size:1.6em;
-    
-        color:#606060;
-    
-    }
+#content h1,#contentalt h1,#contentalt h2 {
+    background-color:inherit;
+    color:#606060;
+    font-size:1.8em;
+    font-weight:bold;
+    letter-spacing:-1px;
+    margin:0 0 15px;
+    padding:0;
+}
+
+#content h1,#contentalt h1 {
+    border-bottom: 1px solid #b0b0b0;
+}
+
+#content h2 {
+    font-size:1.6em;
+    color:#606060;
+}
