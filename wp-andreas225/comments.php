@@ -126,7 +126,7 @@
 
             <p><small><strong>XHTML:</strong> <?php _e('You can use these tags','wp-andreas225'); ?>: <?php echo allowed_tags(); ?></small></p>
 
-            <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+            <input type="hidden" name="comment_post_ID" value="<?php echo $post->ID; ?>" />
 
             <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
 
