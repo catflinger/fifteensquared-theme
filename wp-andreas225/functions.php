@@ -19,11 +19,6 @@ add_action('widgets_init', 'wp_andreas225_register_sidebars');
 
 add_theme_support('title-tag');
 
-function wp_andreas225_add_editor_style() {
-    add_editor_style();
-}
-add_action( 'admin_init', 'wp_andreas225_add_editor_style' );
-
 // wp-andreas225 Colour Options	
 
 load_theme_textdomain('wp-andreas225');
